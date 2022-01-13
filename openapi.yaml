@@ -166,7 +166,7 @@ paths:
           schema:
             type: array
             items:
-              type: string
+              type: number
       responses:
         '200':
           description: successful operation
@@ -673,6 +673,12 @@ components:
         zip:
           type: string
           example: 94301
+        doorColor:
+          type: string
+          example: Cerulean
+      required: [
+        doorColor
+      ]
       xml:
         name: address
       type: object
@@ -766,11 +772,15 @@ components:
               name: tag
         status:
           type: string
-          description: pet status in the store
+          description: Order Status
           enum:
-            - available
-            - pending
-            - sold
+            - placed
+            - approved
+            - delivered
+          example: approved
+        coatColor:
+          type: string
+          example: Cerulean
       xml:
         name: pet
       type: object
