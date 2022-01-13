@@ -738,6 +738,7 @@ components:
       required:
         - name
         - photoUrls
+        - coatColor
       properties:
         id:
           type: integer
@@ -771,6 +772,9 @@ components:
             - available
             - pending
             - sold
+        coatColor:
+          type: string
+          example: Cerulean
       xml:
         name: pet
       type: object
