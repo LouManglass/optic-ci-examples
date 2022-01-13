@@ -1,0 +1,18 @@
+name: Optic CI example workflow definition
+
+on: [ pull_request ]
+
+jobs:
+  optic-ci:
+    name: Optic API Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Run Optic cli
+        uses: opticdev/optic-ci-starter@main
+        with:
+          file: openapi.yaml
+          ruleset: default
