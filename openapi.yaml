@@ -54,6 +54,10 @@ paths:
                     type: integer
                     format: int64
                     example: 10
+                  uuid:
+                    type: string
+                    format: uuid
+                    example: 8998d0eb-b0de-4669-9710-e5eebabf56b5
                   name:
                     type: string
                     example: doggie
@@ -78,6 +82,9 @@ paths:
                       - available
                       - pending
                       - sold
+                  coatColor:
+                    type: string
+                    example: Cerulean
                 type: object
         '405':
           description: Invalid input
@@ -238,6 +245,13 @@ paths:
               - pending
               - sold
             default: available
+        - name: coatColor
+          in: query
+          description: Filter by coat coatColor
+          required: false
+          schema:
+            type: string
+            default: Chartreuse
       responses:
         '200':
           description: successful operation
@@ -281,6 +295,8 @@ paths:
                   type: object
         '400':
           description: Invalid status value
+        '418':
+          description: I'm a teapot!
       security:
         - petstore_auth:
             - 'write:pets'
