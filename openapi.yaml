@@ -298,7 +298,7 @@ paths:
         - name: tags
           in: query
           description: Tags to filter by
-          required: false
+          required: true
           explode: true
           schema:
             type: array
