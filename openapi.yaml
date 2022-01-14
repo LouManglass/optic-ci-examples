@@ -317,9 +317,9 @@ paths:
                     - photoUrls
                   properties:
                     id:
-                      type: integer
-                      format: int64
-                      example: 10
+                      type: string
+                      format: uuid
+                      example: 8998d0eb-b0de-4669-9710-e5eebabf56b5
                     name:
                       type: string
                       example: doggie
