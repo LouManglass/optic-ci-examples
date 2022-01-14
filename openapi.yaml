@@ -232,12 +232,7 @@ paths:
           required: false
           explode: true
           schema:
-            type: string
-            enum:
-              - available
-              - pending
-              - sold
-            default: available
+            type: number
       responses:
         '200':
           description: successful operation
