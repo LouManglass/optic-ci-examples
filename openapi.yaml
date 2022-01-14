@@ -397,13 +397,6 @@ paths:
                           format: int64
                         name:
                           type: string
-                  status:
-                    type: string
-                    description: pet status in the store
-                    enum:
-                      - available
-                      - pending
-                      - sold
                 type: object
         '400':
           description: Invalid ID supplied
