@@ -49,6 +49,7 @@ paths:
                 required:
                   - name
                   - photoUrls
+                  - coatColor
                 properties:
                   id:
                     type: integer
@@ -78,6 +79,9 @@ paths:
                       - available
                       - pending
                       - sold
+                  coatColor:
+                    type: string
+                    example: Cerulean
                 type: object
         '405':
           description: Invalid input
@@ -94,6 +98,7 @@ paths:
                 required:
                   - name
                   - photoUrls
+                  - coatColor
                 properties:
                   id:
                     type: integer
@@ -123,6 +128,9 @@ paths:
                       - available
                       - pending
                       - sold
+                  coatColor:
+                    type: string
+                    example: Cerulean
                 type: object
     put:
       tags:
